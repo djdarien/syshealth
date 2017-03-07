@@ -1,9 +1,9 @@
     #!/bin/bash
     date;
-    echo "uptime:"
+    echo "System Uptime:"
     uptime
     echo "----------------------"
-    echo "Server Network Info"
+    echo "System Network Info"
     ip addr
     echo "----------------------" 
     echo "Currently connected:"
