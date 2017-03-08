@@ -1,5 +1,6 @@
     #!/bin/bash
-    date;
+    echo "Current Time & Date of Health Check" 
+   date;
     echo "System Uptime:"
     uptime
     echo "----------------------"
