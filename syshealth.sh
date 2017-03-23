@@ -26,10 +26,14 @@
     top -b |head -3
     echo
     top -b |head -10 |tail -4
+    ### Checks if NMAP is installed on the system ###
+    sudo yum list installed nmap 
     echo "--------------------"
-    echo "Open TCP ports:"
+    if 
+         echo "Open TCP ports:"
     nmap -p- -T4 127.0.0.1
     echo "--------------------"
+    else       
     echo "Current connections:"
     ss -s
     echo "--------------------"
