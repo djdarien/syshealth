@@ -34,6 +34,7 @@
    nmap -p- -T4 127.0.0.1
    else
    pause
+   echo "NO NMAP Installed! Continue? Without Error?"
    echo "--------------------"
     echo "Current connections:"
     ss -s
