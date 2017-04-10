@@ -28,8 +28,13 @@
     top -b |head -10 |tail -4
     echo "--------------------"
     echo "Open TCP ports:"
-    nmap -p- -T4 127.0.0.1
-    echo "--------------------"
+   if service = running
+   sudo service nmap status
+   then
+   nmap -p- -T4 127.0.0.1
+   else
+   pause
+   echo "--------------------"
     echo "Current connections:"
     ss -s
     echo "--------------------"
