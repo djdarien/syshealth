@@ -26,18 +26,17 @@
     top -b |head -3
     echo
     top -b |head -10 |tail -4
+    ### Checks if NMAP is installed on the system ###
+    sudo yum list installed nmap 
     echo "--------------------"
-    echo "Open TCP ports:"
-   if service = running
-   sudo service nmap status
-   then
-   nmap -p- -T4 127.0.0.1
-   else
-   pause
-   echo "NO NMAP Installed! Continue? Without Error?"
+
+   if 
+ nmap -p- -T4 127.0.0.1
    echo "--------------------"
-    echo "Current connections:"
-    ss -s
+   else       
+======
+    echo "Open TCP ports:"
+
     echo "--------------------"
     echo "processes:"
     ps auxf --width=200
