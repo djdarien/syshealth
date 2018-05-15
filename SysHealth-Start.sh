@@ -5,5 +5,7 @@ echo "Once the script is complete the syshelth script will place a report txt fi
 sudo sh ./syshealth.sh > ./system_health_report$now.txt
 echo "......."
 echo "..........."
+sleep 3s
 echo "..............."
+sleep 2s
 echo "SysHealth Script Complete"
