@@ -1,15 +1,24 @@
     #!/bin/bash
     echo "Current Time & Date of Health Check" 
    date;
-    echo "System Uptime:"
+   echo Current User
+   users
+   echo "----------------"
+   echo "System Uptime:"
     uptime
-    echo "----------------------"
+    echo "----------System Kernel Info------------"
+	uname -a
+	echo "-----------------------------------------"
     echo "System Network Info"
-    ip addr
+    ip addr 
     echo "----------------------" 
     echo "Currently connected:"
     w
     echo "--------------------"
+	
+	echo "------Last 10 Yum Update History---------------"
+grep Updated: /var/log/yum.log | tail -5
+	echo "--------------------------------"
     echo "Last logins:"
     last -a |head -3
     echo "--------------------"
