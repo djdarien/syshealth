@@ -21,9 +21,8 @@ if echo "$answer" | grep -iq "^y" ;then
 sleep 30s
 echo "INSTALL COMPLETE!!"
 else
+  sleep 5s
 echo "This part of the script is for installation only!!"
 echo "Once the script is setup it will email you system health report txt file to your desired email for monitoring."
 sleep 2s
 echo "GOODBYE FOR NOW!"
-sleep 1s
-exit
