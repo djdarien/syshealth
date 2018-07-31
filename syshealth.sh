@@ -1,4 +1,6 @@
     #!/bin/bash
+hostname -f
+echo "------------------------------------------"
     echo "Current Time & Date of Health Check"
    date;
    echo Current User
@@ -35,16 +37,10 @@ grep Updated: /var/log/yum.log | tail -5
     top -b |head -3
     echo
     top -b |head -10 |tail -4
-    ### Checks if NMAP is installed on the system ###
-    sudo yum list installed nmap
     echo "--------------------"
 
-   if
- nmap -p- -T4 127.0.0.1
-   echo "--------------------"
-   else       
-    echo "Open TCP ports:"
-
+     echo "---------Current Sockets:-----------"
+     sudo lsof -nPi
     echo "--------------------"
     echo "processes:"
     ps auxf --width=200
