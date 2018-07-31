@@ -1,5 +1,5 @@
     #!/bin/bash
-    echo "Current Time & Date of Health Check" 
+    echo "Current Time & Date of Health Check"
    date;
    echo Current User
    users
@@ -10,12 +10,12 @@
 	uname -a
 	echo "-----------------------------------------"
     echo "System Network Info"
-    ip addr 
-    echo "----------------------" 
+    ip addr
+    echo "----------------------"
     echo "Currently connected:"
     w
     echo "--------------------"
-	
+
 	echo "------Last 10 Yum Update History---------------"
 grep Updated: /var/log/yum.log | tail -5
 	echo "--------------------------------"
@@ -36,14 +36,13 @@ grep Updated: /var/log/yum.log | tail -5
     echo
     top -b |head -10 |tail -4
     ### Checks if NMAP is installed on the system ###
-    sudo yum list installed nmap 
+    sudo yum list installed nmap
     echo "--------------------"
 
-   if 
+   if
  nmap -p- -T4 127.0.0.1
    echo "--------------------"
    else       
-======
     echo "Open TCP ports:"
 
     echo "--------------------"
@@ -52,5 +51,3 @@ grep Updated: /var/log/yum.log | tail -5
     echo "--------------------"
     echo "vmstat:"
     vmstat 1 5
-
-
